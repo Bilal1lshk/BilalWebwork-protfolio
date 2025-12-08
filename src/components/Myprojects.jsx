@@ -1,5 +1,5 @@
 import img1 from "../assets/images/Project1.png";
-import img2 from "../assets/images/Project2.png";
+import img2 from "../assets/images/project2.png";
 import img3 from "../assets/images/image.png";
 import { FaGithub } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
