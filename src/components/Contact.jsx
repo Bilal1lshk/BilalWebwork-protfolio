@@ -5,7 +5,24 @@ import { FaLocationCrosshairs } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+const contactdata = [
+    {
+        logo: <MdOutlineEmail />,
+        paragraph: "Email",
+        information: "bilalsheikhsb77@gmail.com"
+    },
+    {
+        logo: <FaPhone />,
+        paragraph: "Phone",
+        information: "03191099549"
+    },
+    {
+        logo: <FaLocationCrosshairs />,
+        paragraph: "Location",
+        information: "Punjab,Pakistan"
 
+    }
+]
 
 export default function Contact() {
     return (
@@ -18,33 +35,33 @@ export default function Contact() {
                     Got a project in mind? Drop me a message and let's make it happen.</p>
                 <div> <h5 className='text-3xl'>Contact <span>Information</span></h5>
                     <div className="main w-[70%] mx-auto grid  gap-4 mt-7 grid-rows-4">
-                        <div className='flex  flex-row pr-10 md:pr-0 gap:1 items-center justify-center md:justify-around w-[50%] mx-auto'>
-                            <div className="logo  flex justify-start items-center w-[30px]  h-full">
-                                <MdOutlineEmail className='text-2xl   md:mr-0 text-primary  ' />
-                            </div>
-                            <div className='info w-auto ml-3 md:pl-0'>
-                                <p>Email</p>
-                                <p>bilalsheikhsb77@gmail.com</p>
-                            </div>
-                        </div>
-                        <div className='flex flex-row  pr-30 md:pr-0  gap-2.5 items-center justify-around w-[50%] mx-auto'>
-                            <div className="logo flex justify-start items-center w-[30px]  h-full ">
-                                <FaPhone className='text-2xl -ml-6 text-primary' />
-                            </div>
-                            <div className='info w-auto'>
-                                <p>Phone</p>
-                                <p>03191099549</p>
-                            </div>
-                        </div>
-                        <div className='flex flex-row   items-center justify-around w-[50%] mx-auto'>
-                            <div className="logo  flex justify-start items-center w-[30px]  h-full ">
-                                <FaLocationCrosshairs className='text-2xl -ml-5 pl-0 text-primary' />
-                            </div>
-                            <div className='info w-auto'>
-                                <p>Location</p>
-                                <p>Punjab,Pakistan</p>
-                            </div>
-                        </div>
+                        {
+                            contactdata.map((contact,key) => (
+                                <>
+                                    <div  className=" flex mx-auto  min-w-[200px]  gap-3 items-center justify-between p-1"key={key}>
+                                        <div className='text-2xl text-primary ' >
+                                            {contact.logo}
+                                        </div>
+
+                                        <div className=''>
+                                            <div className='whitespace-pre-wrap'>
+                                                {
+                                                    contact.paragraph
+
+                                                }
+                                            </div>
+                                            <div>
+                                                {
+                                                    contact.information
+
+                                                }
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </>
+                            ))
+                        }
 
 
                     </div>
@@ -54,7 +71,7 @@ export default function Contact() {
                     </h3>
                     <div className="logos mx-auto flex items-center justify-center mt-5 gap-3 w-full">
 
-                        <FaLinkedin className='text-3xl' /><FaInstagramSquare className='text-3xl' /><FaTwitter className='text-3xl' />
+                        <FaLinkedin className='text-3xl text-primary' /><FaInstagramSquare className='text-3xl text-primary' /><FaTwitter className='text-3xl text-primary' />
 
                     </div>
                 </div>

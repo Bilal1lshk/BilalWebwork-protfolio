@@ -12,7 +12,7 @@ const projects = [
         image: img1,
         tags: ["React", " TailwindCSS"],
         demoUrl: "#",
-        githubUrl: "#",
+        githubUrl: "https://github.com/Bilal1lshk/Analysist-landing-page.git",
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ const projects = [
         image: img2,
         tags: ["React", " Tailwindcss Spline"],
         demoUrl: "#",
-        githubUrl: "#",
+        githubUrl: "https://github.com/Bilal1lshk/3d-model-landing.git",
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ const projects = [
         image: img3,
         tags: ["Strong React concepts ", "Figma design"],
         demoUrl: "#",
-        githubUrl: "#",
+        githubUrl: "https://github.com/Bilal1lshk/Dice-Game.git",
     },
 ];
 
@@ -72,7 +72,8 @@ export default function Myprojects() {
                         <h1 className="text-white text-2xl font-medium">{project.title}</h1>
                         <p className="text-gray-400">{project.description}</p>
                         <div className="icons flex pl-3 gap-2.5 ">
-                            <FaGithub className="text-2xl" />
+                            <a target="#" href={project.githubUrl}>  <FaGithub className="text-2xl" /></a>
+                           
                             <FaExternalLinkAlt className="text-2xl" />
                         </div>
                     </div>

@@ -135,7 +135,7 @@
   @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
 }
 @utility box-animation{
-  @apply hover:text-primary hover:border-2 hover:border-primary hover:rounded-full hover:bg-black hover:transition-all duration-75
+  @apply hover:text-primary  hover:border-2 hover:border-primary hover:rounded-full hover:bg-black transition-all duration-100
 }
 
 @utility gradient-border {
