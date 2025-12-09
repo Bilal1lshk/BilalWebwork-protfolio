@@ -34,7 +34,7 @@ export default function Navbar() {
         if (navref.current) {
             gsap.to(navref.current, {
                 x: "-100%",
-                duration: 2.5,
+                duration: 1.5,
                 ease: "power3.in",
                 onComplete: () => setismobilenav(false)
             });
