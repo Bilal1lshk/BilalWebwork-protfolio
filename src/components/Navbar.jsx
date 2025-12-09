@@ -26,32 +26,29 @@ export default function Navbar() {
                 </div>
                 <div  data-aos="fade-down" className="rigth  w-[50%] hidden md:block flex-row   justify-between">
 
-                    <div className="list space-x-4">
+                    <div className="list space-x-4 pointer-events-auto">
                         {
                             navItems.map((item, key) => (
-                                <a key={key} href={item.href} className='text-white text-xl hover:text- transition-colors duration-500' >{item.name} </a>
+                                <a  key={key} href={item.href} className='text-white text-[19px] hover:text-[20px]  hover:text-primary  transition-all duration-300 ' >{item.name} </a>
                             ))
                         }
                     </div>
                 </div>
-                <div className='hidden md:block' onClick={() => setismoon((prev) => !prev)}>
-                    {(ismoon ? <CiSun className={"text-amber-500 text-3xl"} /> : <FaRegMoon className={"text-gray-500 text-xl"} />)
-                    }
-                </div>
+
                 <div onClick={() => setismobilenav((prev) => !prev)} className='font-black text-gray-600 text-4xl md:hidden'>
                     <CiMenuFries />
                 </div>
             </div>
             {/* Mobile Nav BAr */}
-            {ismobilenav && <div className='h-screen p-10 w-full top-0 text-white z-20 absolute bg-black'>
+            {ismobilenav && <div className='min-h-screen  block md:hidden p-10 w-1/2 top-0 text-white z-50 fixed bg-black'>
                 <div className="wrapper relative h-full w-full">
-                    <MdOutlineCancel onClick={() => setismobilenav((prev) => !prev)} className=' absolute  left-[93%] top-1  text-6xl' />
-                    <div className="logo text-2xl">
+                    <MdOutlineCancel onClick={() => setismobilenav((prev) => !prev)} className=' absolute  left-[93%] -top-5  text-5xl' />
+                    <div className="logo text-2xl pr-6">
                         <div className='text-white'>Bilal <span className='text-primary font-semibold text-glow'>Webworks</span> </div>
                         <div className="list flex flex-col  space-y-12 mt-10">
                             {
                                 navItems.map((item, key) => (
-                                    <a key={key} href={item.href} className=' box w-[200px] text-xl hover:text-primary transition-colors duration-500' >{item.name} </a>
+                                    <a onClick={()=>setismobilenav(false)} key={key} href={item.href} className=' box w-[150px] text-xl hover:text-primary transition-colors duration-500' >{item.name} </a>
                                 ))
                             }
                         </div>

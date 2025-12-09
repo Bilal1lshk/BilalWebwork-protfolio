@@ -7,7 +7,7 @@ import { GrProjects } from "react-icons/gr";
 
 export default function Aboutsection() {
     return (
-        <section id="about" className="relative text-white mt-40 pt-1">
+        <section id="about" className="relative text-white z-10 mt-40 pt-1">
             <div className="text-3xl mb-14">
                 About <span className="text-primary">Me</span>
             </div>
@@ -24,7 +24,7 @@ export default function Aboutsection() {
                             Every project I build is grounded in performance, precision, and
                             creativity.
                         </p>
-                        <div className="flex items-center justify-evenly gap-10"><button className="bg-primary px-7 py-3 rounded-full">Get in touch</button><button className=" text-primary px-7 py-2 border-2 border-primary rounded-full">Download Cv</button></div>
+                        <div className="flex items-center justify-evenly gap-10"><button className="bg-primary px-7 py-3 rounded-full box-animation">Get in touch</button><button className=" text-primary px-7 py-2 border-2 border-primary rounded-full">Download Cv</button></div>
                     </div>
                 </div>
                 <div  data-aos="zoom-out-left" className="grid-cols-1 mx-auto md:mx-0 mt-6  md:mt-0  flex  md:block justify-center items-center flex-col space-y-6">

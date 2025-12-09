@@ -5,16 +5,12 @@ import { FaLocationCrosshairs } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-function roundOff(num, ndigits) {
-    const work = num.toFixed(ndigits)
-    console.log(work)
 
-}
-roundOff(3.00997, 2)
 
 export default function Contact() {
     return (
-        <div className='relative text-white h-auto w-[80%] mx-auto'>
+        <div id='contact' data-aos="fade-up"
+            data-aos-duration="3000" className='relative text-white h-auto w-[80%] mx-auto p-3'>
             <div className="wrapeer flex flex-col gap-1.5">
                 <h2 className='text-4xl text-bold '>            Stay Connected
                 </h2>
@@ -58,7 +54,7 @@ export default function Contact() {
                     </h3>
                     <div className="logos mx-auto flex items-center justify-center mt-5 gap-3 w-full">
 
-                        <FaLinkedin  className='text-3xl'/><FaInstagramSquare className='text-3xl'/><FaTwitter className='text-3xl' />
+                        <FaLinkedin className='text-3xl' /><FaInstagramSquare className='text-3xl' /><FaTwitter className='text-3xl' />
 
                     </div>
                 </div>

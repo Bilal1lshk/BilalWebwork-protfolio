@@ -10,13 +10,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'
 
 export default function Home() {
-  useEffect(()=>{
-AOS.init();
+  useEffect(() => {
+    AOS.init();
 
-  },[])
+  }, [])
   return (
-    <div className='min-h-screen w-full overflow-x-hidden'>
+    <div className='min-h-screen  w-full overflow-x-hidden'>
       <Navbar />
+
       <Generatestars />
       <Herosection />
       <Aboutsection />

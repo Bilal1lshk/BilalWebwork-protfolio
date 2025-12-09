@@ -38,7 +38,7 @@ const projects = [
 
 export default function Myprojects() {
     return (
-        <div className="relative text-white h-auto w-full mb-20">
+        <div id="projects" className="relative  text-white h-auto w-full mb-20">
             <h1 className="text-3xl text-primary">
                 Recent <span className="text-white">Projects</span>
             </h1>
@@ -50,6 +50,7 @@ export default function Myprojects() {
                 {projects.map((project, key) => (
                     <div
                         key={key}  data-aos="flip-down"
+                        data-aos-duration="2000"
                         className="bg-card hover:card-hover group rounded-full h-auto flex flex-col text-lg text-amber-50 gap-1.5 "
                     >
                         <div className="">
@@ -77,7 +78,7 @@ export default function Myprojects() {
                     </div>
                 ))}
             </div>
-            <button className="mt-10 bg-primary rounded-full px-7 py-1.5">
+            <button className="mt-10 bg-primary rounded-full px-7 py-1.5 box-animation">
                 Preview ALL
             </button>
         </div>

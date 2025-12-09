@@ -16,10 +16,14 @@ const skills = [
 const categorys = ["all", "frontend", "tools"];
 export default function Myskills() {
     const [activecategory, setactivecategory] = useState("all");
-    console.log(activecategory);
+    const [istrue, setistrue] = useState(false);
+    console.log(istrue)
     const filteredcountry = skills.filter(
         (skill) => activecategory === "all" || skill.category === activecategory
     );
+    if(skills.category===activecategory){
+        console.log("working")
+    }
     return (
         <div id="skills" className="relative  h-full w-full  text-white mt-42 mb-40">
             <div className="wrapper">
@@ -29,8 +33,10 @@ export default function Myskills() {
                 <div className="flex mt-5 text-amber-100 flex-wrap justify-center gap-4 mb-12">
                     {categorys.map((category, i) => (
                         <button
-                            onClick={() => setactivecategory(category)}
-                            className="text-white  uppercase text-2xl bg-primary px-4 py-1.5 rounded-full"
+                            onClick={() => {
+                                setactivecategory(category);
+                                setistrue((prev) => !prev);
+                            }} className={`  uppercase text-2xl  px-4 py-1.5  ${category===activecategory ? "bg-black rounded-full text-primary border-2 border-primary" : "text-white bg-primary rounded-full "}`}
                             key={i}
                         >
                             {category}
@@ -39,7 +45,7 @@ export default function Myskills() {
                 </div>
                 <div className="h-auto w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-7">
                     {filteredcountry.map((filtered) => (
-                        <div  data-aos="flip-left" className="w-full  h-[80px] flex flex-col gap-1 bg-card ">
+                        <div data-aos="flip-left" className="w-full  h-[80px] flex flex-col gap-1 bg-card ">
                             <h1>{filtered.name}</h1>
 
                             <div className="w-[90%] mx-auto">
