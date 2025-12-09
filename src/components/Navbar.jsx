@@ -40,7 +40,7 @@ export default function Navbar() {
                 </div>
             </div>
             {/* Mobile Nav BAr */}
-            {ismobilenav && <div className='min-h-screen  block md:hidden p-10 w-1/2 top-0 text-white z-50 fixed bg-black'>
+            {ismobilenav && <div className='min-h-screen  block md:hidden p-10 w-[66%]  top-0 text-white z-50 fixed bg-black'>
                 <div className="wrapper relative h-full w-full">
                     <MdOutlineCancel onClick={() => setismobilenav((prev) => !prev)} className=' absolute  left-[93%] -top-5  text-5xl' />
                     <div className="logo text-2xl pr-6">

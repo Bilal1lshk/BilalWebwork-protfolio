@@ -18,16 +18,16 @@ export default function Contact() {
                     Got a project in mind? Drop me a message and let's make it happen.</p>
                 <div> <h5 className='text-3xl'>Contact <span>Information</span></h5>
                     <div className="main w-[70%] mx-auto grid  gap-4 mt-7 grid-rows-4">
-                        <div className='flex flex-row  gap:1 items-center justify-around w-[50%] mx-auto'>
+                        <div className='flex  flex-row pr-10 md:pr-0 gap:1 items-center justify-center md:justify-around w-[50%] mx-auto'>
                             <div className="logo  flex justify-start items-center w-[30px]  h-full">
                                 <MdOutlineEmail className='text-2xl   md:mr-0 text-primary  ' />
                             </div>
-                            <div className='info w-auto pl-3 md:pl-0'>
+                            <div className='info w-auto ml-3 md:pl-0'>
                                 <p>Email</p>
                                 <p>bilalsheikhsb77@gmail.com</p>
                             </div>
                         </div>
-                        <div className='flex flex-row   items-center justify-around w-[50%] mx-auto'>
+                        <div className='flex flex-row  pr-30 md:pr-0  gap-2.5 items-center justify-around w-[50%] mx-auto'>
                             <div className="logo flex justify-start items-center w-[30px]  h-full ">
                                 <FaPhone className='text-2xl -ml-6 text-primary' />
                             </div>

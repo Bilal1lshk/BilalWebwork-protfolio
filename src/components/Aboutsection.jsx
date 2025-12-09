@@ -24,7 +24,7 @@ export default function Aboutsection() {
                             Every project I build is grounded in performance, precision, and
                             creativity.
                         </p>
-                        <div className="flex items-center justify-evenly gap-10"><button className="bg-primary px-7 py-3 rounded-full box-animation">Get in touch</button><button className=" text-primary px-7 py-2 border-2 border-primary rounded-full">Download Cv</button></div>
+                        <div className="flex flex-col md:flex-row items-center justify-evenly gap-10"><button className="bg-primary h-[50px] px-3 whitespace-no wrap rounded-full box-animation">Get in touch</button><button className=" text-primary px-7 py-2 border-2 border-primary rounded-full">Download Cv</button></div>
                     </div>
                 </div>
                 <div  data-aos="zoom-out-left" className="grid-cols-1 mx-auto md:mx-0 mt-6  md:mt-0  flex  md:block justify-center items-center flex-col space-y-6">
@@ -48,8 +48,8 @@ export default function Aboutsection() {
                             keep the entire team moving efficiently.
                         </p>
                     </div>
-                    <div className="box1 flex card-hover gradient-border p-1 w-[80%] border border-gray-500">
-                        <div className="wrapper flex flex-col items-center justify-between gap-3.5 w-[30%] "> <h4 className="leading-tight" >Project management</h4>{" "}
+                    <div className="box1 flex card-hover gradient-border p-2 min-w-[80%] max-w-auto border border-gray-500">
+                        <div className="wrapper flex flex-col items-center justify-between gap-3.5 w-[30%] "> <h4 className="leading-tight px-1" >Project management</h4>{" "}
                             <div className="logo"><GrProjects className="text-2xl" /></div>
                         </div>
 
