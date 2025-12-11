@@ -11,7 +11,7 @@ const projects = [
         description: "A beautiful landing page app using React and Tailwind.",
         image: img1,
         tags: ["React", " TailwindCSS"],
-        demoUrl: "#",
+        demoUrl: "https://analysist-landing-page.vercel.app/",
         githubUrl: "https://github.com/Bilal1lshk/Analysist-landing-page.git",
     },
     {
@@ -21,7 +21,7 @@ const projects = [
             "Immersive 3D landing page built with React, Tailwind, and Spline. Features interactive 3D models and smooth animations for a captivating user experience",
         image: img2,
         tags: ["React", " Tailwindcss Spline"],
-        demoUrl: "#",
+        demoUrl: "https://3d-model-landing-tawny.vercel.app/",
         githubUrl: "https://github.com/Bilal1lshk/3d-model-landing.git",
     },
     {
@@ -31,7 +31,7 @@ const projects = [
             "Interactive dice simulator with React. Roll, randomize, and enjoy smooth animations in a clean, responsive UI.",
         image: img3,
         tags: ["Strong React concepts ", "Figma design"],
-        demoUrl: "#",
+        demoUrl: "https://dice-game-eight-blush.vercel.app/",
         githubUrl: "https://github.com/Bilal1lshk/Dice-Game.git",
     },
 ];
@@ -49,7 +49,7 @@ export default function Myprojects() {
             <div className="grid  grid-cols-1 md:grid-cols-3 w-[76%] mx-auto gap-7 mt-8">
                 {projects.map((project, key) => (
                     <div
-                        key={key}  data-aos="flip-down"
+                        key={key} data-aos="flip-down"
                         data-aos-duration="2000"
                         className="bg-card hover:card-hover group rounded-full h-auto flex flex-col text-lg text-amber-50 gap-1.5 "
                     >
@@ -73,15 +73,17 @@ export default function Myprojects() {
                         <p className="text-gray-400">{project.description}</p>
                         <div className="icons flex pl-3 gap-2.5 ">
                             <a target="#" href={project.githubUrl}>  <FaGithub className="text-2xl" /></a>
-                           
-                            <FaExternalLinkAlt className="text-2xl" />
+
+                            <a target="#" href={project.demoUrl}><FaExternalLinkAlt className="text-2xl" /></a>
                         </div>
                     </div>
                 ))}
             </div>
-            <button className="mt-10 bg-primary rounded-full px-7 py-1.5 box-animation">
-                Preview ALL
-            </button>
+            <a href="https://github.com/Bilal1lshk" target="#">
+                <button className="mt-10 bg-primary rounded-full px-7 py-1.5 box-animation">
+                    Preview ALL
+                </button>
+            </a>
         </div>
     );
 }
